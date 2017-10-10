@@ -1,0 +1,33 @@
+{
+    "ver": "1.0",
+    "loop": true,
+    "music": "music.mp3",
+    "movie": "movie.mp4",
+    "plat": "Android",
+    "animations": {
+        "frames": [
+            {
+                "eid": 1,
+                "t": 5000,
+                "vtrack": "a",
+                "fid": 1,
+                "fs": true
+            },
+            {
+                "eid": 1,
+                "t": 6000,
+                "vtrack": "a",
+                "fid": 1,
+                "fs": false
+            }
+        ]
+    },
+    "filters": [
+        {
+            "vertex": "",
+            "fragment": "\nprecision highp float;\nuniform sampler2D inputImageTexture;\nvarying vec2 textureCoordinate;\nuniform float timeInfo;\nvoid main()\n{\nvec2 newcoor = textureCoordinate;\nfloat timediff = 1.0 - timeInfo;\nif (textureCoordinate.y > timediff){\nnewcoor.y = textureCoordinate.y - timediff;\n}else{\nnewcoor.y = 1.0 - (timediff - textureCoordinate.y);\n}\nvec4 video = texture2D(inputImageTexture, newcoor);\ngl_FragColor = video;\n} ",
+            "name": "Up",
+            "fid": 1
+        }
+    ]
+}
