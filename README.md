@@ -95,7 +95,7 @@
 |loop|Bool|是否循环|true：以mv主视频为基准循环，当mv主音频文件不足时主动循环主音频文件|
 |movie |String|主视频路径|MV素材的主视频文件路径，1.0版本不能为空，支持网络文件|
 |music|String|主音频路径|MV素材的主音频文件路径，支持网络文件|    
-|plat|String|平台信息|Android/iOS|
+|plat|String|平台信息|Android/iOS (目前没有什么用途,只是为了区分平台信息而已)|
 |animations|Array|mv frams信息|滤镜或其他效果的时间等信息，作为MV的事件驱动|
 |filters|Array|滤镜数组信息|作用于MV视频文件或者原始视频的滤镜信息|  
 
