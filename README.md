@@ -2,7 +2,7 @@
 金山云提供业内一流的短视频MV效果。
 
 * 提供制作MV的所有技术文档；
-* 提供多种MV 资源包，同时适配iOSAndroid平台；
+* 提供多种MV 资源包，同时适配iOS/Android平台；
 
 
 ### 1. 短视频SDK
@@ -14,19 +14,22 @@
 [iOS]:https://github.com/ksvc/KSYMediaEditorKit_iOS
 
 ### 2. MV制作教程
-
+1.0版本中，每个MV资源文件包含以下内容：
 * MV配置文件 config.json
 * MV需要的 *.mp3资源
-* MV 需要的 *.mp4资源
+* MV需要的 *.mp4资源
+* MV缩略图icon.png(仅用于MV选择时的UI显示)
 
-> 用 config.json 来管理和协调各种资源的工作, 如果这些配置好以后 打包成__zip__
+配置好以上资源后，打包成__zip__以备使用
 
-注意:**文件夹打包的名称必须和zip 包名称一致,否则解压不出来** 
+> 注意:**Demo中 文件夹打包的名称必须和zip 包名称一致,否则解压不出来**    
+> 注意:可以不把icon.png打包到zip中，直接在demo里面使用
 
 
-目前我们提供三套主题  
+目前我们提供三套主题：Fashion Shots；Lucky You；Party Time，具体效果请参考对应Demo
 
-当你解压开 zip 包的时候你会发现里面有一个 config.json 文件
+### 2.1 配置config.json文件
+每个zip中必须包含一个config.json 文件，该文件负责配置所有资源的使用
 
 ``` json
 {
